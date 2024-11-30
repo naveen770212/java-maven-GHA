@@ -36,8 +36,11 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'adoptopenjdk'
+        distribution: 'adopt'
         cache: 'maven'
+        
+    - name: verify java version
+      run: java -version
 
     # Cache Maven dependencies to speed up the build process
     - name: Cache Maven dependencies
